@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository.Person
 {
-    class Person
+    class PersonEntities
     {
     }
 }
