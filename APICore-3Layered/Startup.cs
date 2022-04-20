@@ -1,3 +1,4 @@
+using DAL.Repository.Person;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,8 @@ namespace APICore_3Layered
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "APICore_3Layered", Version = "v1" });
             });
+            services.AddSingleton<IPersonBLL, PersonBLL>();
+            services.AddSingleton<IPersonDAL, PersonDAL>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

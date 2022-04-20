@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository.Person
 {
-    class PersonBLL
+    public class PersonBLL : IPersonBLL
     {
+        private IPersonDAL _IPersonDAL;
+        public PersonBLL(IPersonDAL _IpersonDAL)
+        {
+            _IPersonDAL = _IpersonDAL;
+        }
+        public string display()
+        {
+            return _IPersonDAL.display();
+        }
     }
 }

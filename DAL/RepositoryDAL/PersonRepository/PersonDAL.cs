@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository.Person
 {
-    class PersonDAL
+   public class PersonDAL : IPersonDAL
     {
+        public string display()
+        {
+            Console.WriteLine("In PersonDAL");
+            return "hello";
+          
+        }
     }
 }

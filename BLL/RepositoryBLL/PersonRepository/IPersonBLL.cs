@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository.Person
 {
-    interface IPersonBLL
+   public interface IPersonBLL
     {
+        public string display();
     }
 }
